@@ -124,17 +124,15 @@ namespace Aula201021
                 Console.WriteLine("Seu triangulo tem dois lados iguais, ele é Isósceles!");
             }*/
 
+            // Verificar se pode doar sangue de acordo com a idade
             Console.Write("Digite sua idade: ");
             int idade = int.Parse(Console.ReadLine());
 
             if(idade < 18 || idade > 67)
-            {
                 Console.WriteLine("Você não pode doar sangue!");
-            }
+            
             else
-            {
                 Console.WriteLine("Pode doar sangue!");
-            }
         }
     }
 }
