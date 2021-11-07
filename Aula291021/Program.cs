@@ -127,6 +127,7 @@ namespace Aula291021
                 Console.WriteLine("\nA soma das diagonais são diferentes");
             */
 
+            /*
             int[,] mat = new int[5, 5];
             int[] diagP = new int[5];
             int[] diagS = new int[5];
@@ -170,6 +171,33 @@ namespace Aula291021
 
             else
                 Console.WriteLine("Os numeros das duas diagonais são diferentes!");
+            */
+
+            // Exercicios
+            /*
+            int[,] mat = new int[4, 4];
+            int[,] mat2 = new int[4, 4];
+            int[,] matSoma = new int[4, 4];
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    mat[i, j] = 1;
+                    mat2[i, j] = 2;
+                }
+            }
+            */
+
+            
+            int[,] jogos = new int[20, 2];
+
+            Console.WriteLine("Digite os gols dos times");
+            for(int i = 0; i < 20; i++)
+            {
+
+            }
+
         }
     }
 }
