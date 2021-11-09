@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <article>
+        <h1>Exercicio 1</h1>
+        Crie um formulário com 4 botões que, ao clicar em cada um, altere a cor do plano de fundo da página para vermelho, verde, azul e amarelo, respectivamente. 
+        <br>
+        
+        <button onclick="planoFundoVermelho();">Vermelho</button>
+        <button onclick="planoFundoVerde();">Verde</button>
+        <button onclick="planoFundoAzul();">Azul</button>
+        <button onclick="planoFundoAmarelo();">Amarelo</button>
+        <br>
+        </article>
+
+        <article>
+        <h1>Exercicio 2</h1>
+        Crie uma página com 4 links (tag a), cada um representando o nome de uma cor, que, utilizando o evento onmouseover altere a cor do plano de fundo para cor correspondente. 
+        <br>
+
+        <a href="https://www.google.com/" onmouseover="planoFundoVermelho();" onmouseout="planoFundoDefault();">Vermelho</a>
+        <a href="https://www.google.com/" onmouseover="planoFundoVerde();" onmouseout="planoFundoDefault();">Verde</a>
+        <a href="https://www.google.com/" onmouseover="planoFundoAzul();" onmouseout="planoFundoDefault();">Azul</a>
+        <a href="https://www.google.com/" onmouseover="planoFundoAmarelo();" onmouseout="planoFundoDefault();">Amarelo</a>
+        </article>
+
+        <article>
+            <h1>Exercicio 3</h1>
+            Crie uma página com uma lista (select - RadioButton) com 4 opções de cores. Ao selecionar uma opção de cor, altere o plano de fundo da página para a cor específica. 
+            <br>
+
+            <a href="Exercicio3.html">Ir a pagina do Exercicio3</a>
+        </article>
+
+        <article>
+            <h1>Exercicio 4</h1>
+            Crie um parágrafo (p) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou mostre o texto do parágrafo. 
+            <br>
+
+            <button onclick="mostrarTexto();">Mostrar texto</button>
+            <p hidden id="hiddenText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam facere ad natus nemo pariatur est, aut velit consectetur repellendus reiciendis fugit exercitationem id libero porro, esse obcaecati accusamus quos maxime.</p>
+        </article>
+
+        <article>
+            <h1>Exercicio 5</h1>
+            Crie um formulário de seleção de itens com checkbox. O formulário deve possuir um botão desabilitado. O botão só se torna clicável quando tiver pelo menos 2 checkboxs marcado. 
+            <br>
+        
+            <form>
+                <input type="checkbox" name="check" onclick="habilitarCheckbox()">check1   
+                <br>
+                <input type="checkbox" name="check" onclick="habilitarCheckbox()">check2
+                <br>
+                <input type="checkbox" id="check3" disabled>check3
+            </form>
+        </article>
+
+        <article>
+            <h1>Exercicio 6</h1>
+            Crie um parágrafo com um texto como conteúdo. Crie 4 botões. Dois para trocar a cor da fonte, de branco para preto e vice-versa e outros dois para fazer o mesmo com o fundo do parágrafo. Use divs se julgar necessário. 
+            <br>
+
+            <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magni sapiente inventore officiis quae alias ad, deleniti atque nostrum sunt neque dignissimos praesentium illum deserunt id a tenetur cum nam.</p>
+            <button onclick="alterarCorFonteBranco();">Fonte Branca</button>
+            <button onclick="alterarCorFontePreto();">Fonte Preta</button>
+            <br>
+            <button onclick="alterarCorFundoBranco();">Fundo Branco</button>
+            <button onclick="alterarCorFundoPreto();">Fundo Preto</button>
+        </article>
+
+        <article>
+            <h1>Exercicio 7</h1>
+            Crie um botão + (mais) e outro – (menos) na mesma página do exercício anterior. Esses botões aumentam e diminuem o tamanho da fonte, respectivamente. 
+            <br>
+
+            <button onclick="aumentarTamLetra();">+</button>
+            <button onclick="diminuirTamLetra();">-</button>
+        </article>
+
+        <article>
+            <h1>Exercicio 8</h1>
+            Ainda continuando no exercício 6, faça um botão que transforme todo o texto do parágrafo em maiúscula, e outro em minúscula. 
+            <br>
+
+            <button onclick="deixarMaiuscula();">Maiuscula</button>
+            <button onclick="deixarMinuscula();">Minuscula</button>
+        </article>
+
+        <article>
+            <h1>Exercicio 9</h1>
+            Crie um formulário com os campos para cadastrar o usuário de um sistema (login, senha e confirmar senha). Permita que a página seja submetida apenas se todos os campos estiverem preenchidos, se os campos senha e confirma senha forem iguais e a senha possuir entre 6 e 10 caracteres
+            <br>
+
+            <form>
+
+            </form>
+        </article>
+
+        <article>
+            <h1>Exercicio 10</h1>
+            Crie um formulário de cadastro de cliente. O formulário deve conter os campos Nome (text), Pessoa (Física/Jurídica – radio), CPF (text), CNPJ (text), data de nascimento, endereço (text), cep (text), telefone (text), email. O formulário deve ativar o campo CPF apenas se o RadioButton de pessoa física estiver ativo e o campo de CNPJ no caso de pessoa jurídica. O campo data de nascimento também só deve estar ativo no caso de pessoa física ser selecionado e deve aceitar que somente números sejam digitados. O campo CEP também só deve aceitar número. 
+            <br>
+        </article>
+    </body>
+
+</html>
