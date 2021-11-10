@@ -83,3 +83,39 @@ function deixarMinuscula(){
     var element = document.getElementById("paragrafo");
     element.style.textTransform = "lowercase";
 }
+
+// Exercicio 9
+function validarSenha(){
+    var senha = document.getElementById("senha");
+    var confSenha = document.getElementById("confsenha");
+
+    if(senha.value.length < 6 || senha.value.length > 10){
+        senha.setCustomValidity("A senha deve ter entre 6 e 10 caracteres!");
+        return false;
+    }
+    else if(senha.value != confSenha.value){
+        confSenha.setCustomValidity("Senhas diferentes!");
+        return false;
+    }
+    else{
+        senha.setCustomValidity('');
+        return true;
+    }
+    
+}
+
+// Exercicio 10
+function alteraVisibilidade(tipoP){
+    if(tipoP == "fisica"){
+        document.getElementById("pessoaFisica").style.display = "block";
+        document.getElementById("pessoaJuridica").style.display = "none";
+    }
+    else{
+        document.getElementById("pessoaFisica").style.display = "none";
+        document.getElementById("pessoaJuridica").style.display = "block";
+    }
+}
+
+function cadastrar(){
+    
+}

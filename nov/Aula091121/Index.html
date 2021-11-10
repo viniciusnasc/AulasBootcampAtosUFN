@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            /*$("button").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });*/
+
+            $("#bb").click(function(){
+                $("body").css("background", "blue");
+            });
+
+            $("#by").click(function(){
+                $("body").css("background", "yellow");
+            });
+
+            $("#br").click(function(){
+                $("body").css("background", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Aula JQuery</h1>
+    <br>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nam, nisi voluptatibus est voluptate saepe quidem autem neque quibusdam, possimus ullam in ratione asperiores reiciendis placeat eaque iure facere eum?
+    </p>
+
+    <button>Clique aqui!</button>
+
+    <div id="div1" style="width:80px; height: 80px;background-color: red;"></div>
+    <div id="div2" style="width:80px; height: 80px;background-color: green;"></div>
+    <div id="div3" style="width:80px; height: 80px;background-color: blue;"></div>
+
+    <button id="bb">Fundo azul</button>
+    <button id="br">Fundo red</button>
+    <button id="by">Fundo yellow</button>
+</body>
+</html>
