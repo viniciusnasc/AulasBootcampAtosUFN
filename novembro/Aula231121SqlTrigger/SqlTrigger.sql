@@ -28,7 +28,7 @@ on java
 after insert
 as
 begin
-	insert into log values('insers√£o', 'foi incluido um registro da tabela java', GETDATE());
+	insert into log values('insers„o', 'foi incluido um registro da tabela java', GETDATE());
 	PRINT('Dados inseridos!');
 end
 
@@ -78,14 +78,15 @@ BEGIN
 	
 	if @old = @new
 		begin
-			raiserror('Sem altera√ß√µes! Valores s√£o iguais', 14,1 );
+			raiserror('Sem alteraÁıes! Valores s„o iguais', 14,1 );
 			rollback transaction;
-			insert into log values('Altera√ßao', 'tentativa de altera√ß√£o do nome de um professor na academia dotnet, pelo mesmo nome', getdate())
+			insert into log values('AlteraÁao', 'tentativa de alteraÁ„o do nome de um professor na academia dotnet, pelo mesmo nome', getdate())
 		end
 	else
 	begin
-		insert into log values('Altera√ßao', 'altera√ß√£o do nome de um professor ' + @old + ' na academia dotnet, para o nome ' + @new, getdate())
+		insert into log values('AlteraÁao', 'alteraÁ„o do nome de um professor ' + @old + ' na academia dotnet, para o nome ' + @new, getdate())
 	end
+
 END
 
 create trigger QuintaTrigger
@@ -95,7 +96,7 @@ as
 BEGIN
 	declare @nome varchar(10)
 	select @nome = (select deleted.Professor from deleted)
-	insert into log values('exclus√£o', @nome + ' foi excluido dos professores da academia .net', getdate());
+	insert into log values('exclus„o', @nome + ' foi excluido dos professores da academia .net', getdate());
 END
 
 delete from dotnet where professor = 'teste'
@@ -149,15 +150,16 @@ begin
 	
 		if @Inicio > @InicioEra 
 		begin
-			raiserror('O inicio do aparecimento do dinossauro n√£o condiz com a era', 14,1 );
+			raiserror('O inicio do aparecimento do dinossauro n„o condiz com a era', 14,1 );
 			rollback transaction;
 		end
 	
 		if @Fim < @FimEra
 		begin
-			raiserror('A data de extin√ß√£o do dinossauro n√£o condiz com a era', 14,1 );
+			raiserror('A data de extinÁ„o do dinossauro n„o condiz com a era', 14,1 );
 			rollback transaction;
 		end
+
 end
 
 insert into dinossauro values('dinossauron', 1,5,1900,2,1,2,144,3)

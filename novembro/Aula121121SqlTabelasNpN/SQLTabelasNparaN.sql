@@ -30,13 +30,6 @@ references disciplina(idDisciplina)
 )
 
 /* Atividade Pilotos - Equipes - Patrocinadores */
-create database AulaPilotos
-use AulaPilotos
-drop table piloto
-drop table equipe
-drop table patrocinador
-drop table contratoEquipePiloto
-drop table contraroEquipePatrocinador
 
 create table equipe(
 equipeId int primary key not null identity,
@@ -100,7 +93,7 @@ CREATE TABLE EVENTOS
     fk_tipo integer not null,
     foreign key (fk_tipo) references TIPO_EVENTO(id)
 );
-CREATE TABLE PROGRAMACAO/*atraÃ§Ãµes*/(
+CREATE TABLE PROGRAMACAO/*atrações*/(
     id integer primary key not null identity,
     fk_evento integer not null,
     nome varchar(50) not null,

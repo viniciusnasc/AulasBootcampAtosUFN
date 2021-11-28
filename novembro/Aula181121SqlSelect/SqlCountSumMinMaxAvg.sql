@@ -2,8 +2,7 @@
 
 select * from Livro
 
-update Livro set titulo = 'Pior que tÃ¡ nÃ£o fica' where titulo like 'Pior Que TÃ¡ NÃ£o Fica'
-update Livro set tÃ­tulo = 'Harry Potter e a pedra filosofal'
+update Livro set titulo = 'Pior que tá não fica' where titulo like 'Pior Que Tá Não Fica'
 
 select * from LIVRO where ano_publicacao > '2010' and ano_publicacao < '2014'
 select * from LIVRO where MONTH(ano_publicacao) = '01'

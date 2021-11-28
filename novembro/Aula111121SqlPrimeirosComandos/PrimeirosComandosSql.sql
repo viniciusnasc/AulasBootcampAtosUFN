@@ -30,6 +30,11 @@ alter table Pessoa drop column CPF
 alter table Pessoa alter column nome varchar(35)
 
 /* Indicando uma chave estrangeira */
+create table Fabricante(
+id_fabricante int primary key not null identity,
+nome_fabricante varchar(50)
+)
+
 create table Produto(
 id_produto int primary key not null identity,
 nome_produto varchar(40),
@@ -38,10 +43,6 @@ data_compra date,
 fabricante int,
 CONSTRAINT FK_fabricante FOREIGN KEY(fabricante)
 REFERENCES Fabricante (id_fabricante)
-)
-create table Fabricante(
-id_fabricante int primary key not null identity,
-nome_fabricante varchar(50)
 )
 
 /* Exercicio criar tabela pais, estado e cidade com as devidas chaves estrangeiras */

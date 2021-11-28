@@ -1,22 +1,5 @@
 /* Aula 17/11 */
 
-create dataBASE LivrosDB
-use LivrosDB
-
-create table EDITORA
-(
-    id integer not null primary key identity,
-    nome varchar(50) not null)
-create table AUTOR
-(
-    id integer not null primary key identity,
-    nome varchar(50) not null,
-    nacionalidade varchar(50)
-)
-create table CATEGORIA
-(
-    id integer not null primary key identity,
-    tipo_categoria varchar(50) not null)
 create table LIVRO
 (
     isbn varchar(50) primary key not null,
@@ -27,16 +10,10 @@ create table LIVRO
     FOREIGN KEY (fk_editora) REFERENCES EDITORA (id),
     FOREIGN KEY (fk_categoria) REFERENCES CATEGORIA (id)
 )
-create table LIVROAUTOR
-(
-    id int not null primary key identity,
-    fk_livro varchar(50) not null,
-    fk_autor integer not null,
-    FOREIGN KEY (fk_livro) REFERENCES LIVRO (isbn),
-    FOREIGN KEY (fk_autor)  REFERENCES AUTOR (id)
-)
-/*insert*/insert into CATEGORIA values('Literatura Juvenil');
-insert into CATEGORIA values('Fic√ß√£o Cient√≠fica');
+
+/*insert*/
+insert into CATEGORIA values('Literatura Juvenil');
+insert into CATEGORIA values('FicÁ„o CientÌfica');
 insert into CATEGORIA values('Humor');
 select * from CATEGORIA;
 insert into AUTOR(nome) values('J.K.Rowling');
@@ -44,7 +21,7 @@ insert into AUTOR(nome) values('Clive Staples Lewis');
 insert into AUTOR(nome) values('Affonso Solano');
 insert into AUTOR(nome) values('Marcos Piangers');
 insert into AUTOR(nome) values('Ciro Botelho - Tiririca');
-insert into AUTOR(nome) values('Bianca M√≥l');
+insert into AUTOR(nome) values('Bianca MÛl');
 select * from AUTOR;
 insert into EDITORA(nome) values('Rocco');
 insert into EDITORA(nome) values('Wmf Martins Fontes');
@@ -53,13 +30,24 @@ insert into EDITORA(nome) values('Belas Letras');
 insert into EDITORA(nome) values('Matrix');
 select *from EDITORA;
 insert into LIVRO values('8532511015','Harry Potter e A Pedra Filosofal','2000',1,1);
-insert into LIVRO values('9788578270698','As Cr√¥nicas de N√°rnia','2009',1,2);
-insert into LIVRO values('9788577343348','O Espadachim de Carv√£o','2013',3,3);
-insert into LIVRO values('9788581742458','O Papai √â Pop','2015',3,1);
-insert into LIVRO values('9788582302026','Pior Que T√° N√£o Fica','2015',4,2);
-insert into LIVRO values('9788577345670','Garota Desdobr√°vel','2015',2,3);
+insert into LIVRO values('9788578270698','As CrÙnicas de N·rnia','2009',1,2);
+insert into LIVRO values('9788577343348','O Espadachim de Carv„o','2013',3,3);
+insert into LIVRO values('9788581742458','O Papai … Pop','2015',3,1);
+insert into LIVRO values('9788582302026','Pior Que T· N„o Fica','2015',4,2);
+insert into LIVRO values('9788577345670','Garota Desdobr·vel','2015',2,3);
 insert into LIVRO values('8532512062','Harry Potter e o Prisioneiro de Azkaban','2000',1,1);
 select *from LIVRO;
+
+drop table LIVROAutor
+create table LivroAutor(
+id int not null identity primary key,
+FkLivro varchar(50) not null,
+FkAutor int not null,
+
+foreign key(FkLivro) references Livro(ISBN),
+foreign key(FkAutor) references Autor(id)
+)
+
 insert into LIVROAUTOR values('8532511015',1);
 insert into LIVROAUTOR values('9788578270698',2);
 insert into LIVROAUTOR values('9788577343348',3);

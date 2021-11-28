@@ -23,10 +23,10 @@ select * from Java
 select * from Java inner join dotnet on java.professor = dotnet.professor
 select * from Java as J inner join dotnet as D on j.professor = d.professor
 
-/* Retorna todos os professores da primeira tabela, mostrando qual est√° na segunda */
+/* Retorna todos os professores da primeira tabela, mostrando qual est· na segunda */
 select * from Java left join Dotnet on java.professor = Dotnet.professor
 
-/* Retorna todos os professores da segunda tabela, mostrando qual est√° na primeira */
+/* Retorna todos os professores da segunda tabela, mostrando qual est· na primeira */
 select * from Java right join Dotnet on java.professor = Dotnet.professor
 
 /* Retorna todos os professores, de ambas tabelas, mostrando onde eles existem e nao existem */ 
@@ -39,7 +39,7 @@ from Java full outer join Dotnet on java.professor = Dotnet.professor
 select * from Java left join Dotnet on java.professor = Dotnet.professor 
 where Dotnet.professor is null
 
-/* Retorna todos os professores da segunda tabela, exceto os que est√£o na primeira */
+/* Retorna todos os professores da segunda tabela, exceto os que est„o na primeira */
 select * from Java right join Dotnet on java.professor = Dotnet.professor where Java.professor is null
 
 /* Retorna todos os professores, de ambas tabelas, exceto os que pertencem a ambas tabelas */ 
@@ -82,7 +82,7 @@ Nome varchar(50)
 
 insert into Descobridor values('Maryanska')
 insert into Descobridor values('John Bell Hatcher')
-insert into Descobridor values('Cientistas Alem√£es')
+insert into Descobridor values('Cientistas Alem„es')
 insert into Descobridor values('Museu Americano de Historia Natural')
 insert into Descobridor values('Orthniel Charles Marsh')
 insert into Descobridor values('Barmum Brown')
