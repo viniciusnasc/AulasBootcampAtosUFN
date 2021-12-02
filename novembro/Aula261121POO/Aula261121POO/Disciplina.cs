@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aula261121POO
 {
-    class Disciplina
+    class Disciplina 
     {
         private string Nome;
         private int CargaHoraria;

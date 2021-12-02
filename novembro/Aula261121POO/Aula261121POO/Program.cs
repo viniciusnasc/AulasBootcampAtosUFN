@@ -11,11 +11,8 @@ namespace Aula261121POO
             d1.GetNome();
             d1.GetCargaHoraria();
 
-            Animal a1 = new("cachorro", "m", "pitbull");
+           // Animal a1 = new("cachorro", "m", "pitbull");
 
-            a1.Caminhar();
-            a1.Dormir();
-            a1.EmitirSom();
         }
     }
 }
